@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-body">
+  </div>
+</div>
+<div  class="text-center">
+  <h1 class="text-danger">UserList</h1>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">name</th>
+    <th scope="col">username</th>
+    <th scope="col">email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of listUsers">
+    <td>{{t.id}}</td>
+    <td>{{t.name}}</td>
+    <td>{{t.username}}</td>
+    <td>{{t.email}}</td>
+    <a routerLink="/assets/todo.json{{t.id}}">voir details</a>
+  </tr>
+  </tbody>
+</table>
+<div  class="text-center">
+  <input type="text"  ngModel="text">
+  <button (click)="getuser()" type="button" class="btn btn-success">GetUser</button>
+  <h1> ** Le Nombre de Utulisateurs est : {{u}}  ** </h1>
+</div>
+
+

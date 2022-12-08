@@ -1,0 +1,32 @@
+
+
+<div class="card">
+  <div class="card-body">
+  </div>
+</div>
+<div  class="text-center">
+  <h1 class="text-danger">ListToDo</h1>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">titre</th>
+    <th scope="col">Completed</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of listTodo">
+    <td>{{t.id}}</td>
+    <td>{{t.title}}</td>
+    <td>{{t.completed}}</td>
+    <a routerLink="/listtodo/{{t.id}}">voir details</a>
+  </tr>
+  </tbody>
+</table>
+<div  class="text-center">
+<button (click)="gettodo()" type="button" class="btn btn-success">Gettodo</button>
+<h1> ** Le Nombre de Todo est ** : {{c}}</h1>
+</div>
+
